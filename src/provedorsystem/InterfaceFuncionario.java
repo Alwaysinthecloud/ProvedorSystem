@@ -7,8 +7,7 @@ public interface InterfaceFuncionario {
     public abstract void adicionarFuncionario();
     public abstract void removerFuncionario();
     public abstract void aumentarSalario();
-    public abstract void diminuirSalario();
-    public abstract void buscarFuncionario();
+    public abstract void buscar();
     
     //Criação de uma interface para encapsular os métodos
     

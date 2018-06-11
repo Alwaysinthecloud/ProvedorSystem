@@ -52,18 +52,8 @@ public class Funcionario extends Pessoa implements InterfaceFuncionario {
         salario = entrada.nextFloat();
         listaf.add(funcionario);
 
-//        for (Funcionario funcionario1 : listaf) {
-//            System.out.println("PEGA MISERA " + funcionario1.getEmail());
-//            
-//
-//        }
     }
 
-//    public Funcionario(String nome, String endereco, String email, String cpf, String rg,
-//            String numTelefone, float salario) {
-//        
-//
-//    }
     @Override
     public void removerFuncionario() {
         System.out.println("Informe o CPF do funcionário: ");
@@ -77,9 +67,9 @@ public class Funcionario extends Pessoa implements InterfaceFuncionario {
                 listaf.remove(i);
                 System.out.println(cpfc + ", excluído com sucesso!");
                 resultado++;
-            }else if(voltas == listaf.size() && resultado == 0){
+            } else if (voltas == listaf.size() && resultado == 0) {
                 System.out.println("O CPF informado não existe");
-                
+
             }
         }
     }
@@ -92,30 +82,41 @@ public class Funcionario extends Pessoa implements InterfaceFuncionario {
         aumento = entrada.nextFloat();
         int resultado = 0;
         int voltas = 0;
-        
-        for (int i =0; i < listaf.size(); i++){
+
+        for (int i = 0; i < listaf.size(); i++) {
             voltas++;
-            if(listaf.get(i).getCpf().contains(cpfc)){
-                listaf.get(i).setSalario(salario + aumento); 
+            if (listaf.get(i).getCpf().contains(cpfc)) {
+                listaf.get(i).setSalario(salario + aumento);
                 System.out.println("Novo salário: " + listaf.get(i).getSalario());
+                resultado++;
+            } else if (voltas == listaf.size() && resultado == 0) {
+                System.out.println("O CPF informado não existe");
             }
-            
+
+        }
+
+    }
+
+
+    @Override
+    public void buscar() {
+        int voltas = 0;
+        int resultado =0;
+        System.out.println("Informe o CPF para busca: ");
+        cpfc = pedecpf.nextLine();
+                for (int i = 0; i < listaf.size(); i++) {
+            voltas++;
+            if (listaf.get(i).getCpf().contains(cpfc)) {
+                //Método do Status aqui!
+                resultado++;
+            } else if (voltas == listaf.size() && resultado == 0) {
+                System.out.println("O CPF informado não existe");
+            }
+
         }
         
         
 
-    }
-
-    @Override
-    public void diminuirSalario() {
-        for (Funcionario funcionario : listaf) {
-            System.out.println("Aqui tem: " + funcionario.getCpf());
-
-        }
-    }
-
-    @Override
-    public void buscarFuncionario() {
     }
 
     public float getSalario() {
