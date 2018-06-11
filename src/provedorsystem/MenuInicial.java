@@ -41,6 +41,9 @@ public class MenuInicial {
                             case 3:
                                 master.aumentarSalario();
                                 break;
+                            case 4:
+                                master.diminuirSalario();
+                                break;
 
                         }
                     } while (op != 5);

@@ -7,7 +7,7 @@ public class Funcionario extends Pessoa implements InterfaceFuncionario {
 
     private float salario;
     private int op;
-    private double aumento;
+    private float aumento;
     public String cpfc;
     //Funcionario funcionario = null;
 
@@ -86,19 +86,44 @@ public class Funcionario extends Pessoa implements InterfaceFuncionario {
 
     @Override
     public void aumentarSalario() {
-        for (Funcionario funcionario : listaf) {
-            System.out.println("Aqui tem: " + funcionario.getCpf());
-
+        System.out.println("CPF de quem irá receber aumento: ");
+        cpfc = pedecpf.nextLine();
+        System.out.println("Informe em R$ o valor do aumento: ");
+        aumento = entrada.nextFloat();
+        int resultado = 0;
+        int voltas = 0;
+        
+        for (int i =0; i < listaf.size(); i++){
+            voltas++;
+            if(listaf.get(i).getCpf().contains(cpfc)){
+                listaf.get(i).setSalario(salario + aumento); 
+                System.out.println("Novo salário: " + listaf.get(i).getSalario());
+            }
+            
         }
+        
+        
 
     }
 
     @Override
     public void diminuirSalario() {
+        for (Funcionario funcionario : listaf) {
+            System.out.println("Aqui tem: " + funcionario.getCpf());
+
+        }
     }
 
     @Override
     public void buscarFuncionario() {
+    }
+
+    public float getSalario() {
+        return salario;
+    }
+
+    public void setSalario(float salario) {
+        this.salario = salario;
     }
 
 }
