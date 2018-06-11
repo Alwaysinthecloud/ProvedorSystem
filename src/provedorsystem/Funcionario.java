@@ -72,11 +72,12 @@ public class Funcionario extends Pessoa implements InterfaceFuncionario {
         int voltas = 0;
 
         for (int i = 0; i < listaf.size(); i++) {
+            voltas++;
             if (listaf.get(i).getCpf().equals(cpfc)) {
                 listaf.remove(i);
                 System.out.println(cpfc + ", excluído com sucesso!");
                 resultado++;
-            }else if(voltas + 1 == listaf.size() && resultado == 0){
+            }else if(voltas == listaf.size() && resultado == 0){
                 System.out.println("O CPF informado não existe");
                 
             }
