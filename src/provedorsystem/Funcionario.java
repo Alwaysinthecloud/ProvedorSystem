@@ -21,6 +21,7 @@ public class Funcionario extends Pessoa implements InterfaceFuncionario {
     Scanner cpfcan = new Scanner(System.in);
     Scanner pederg = new Scanner(System.in);
     Scanner pedetelefone = new Scanner(System.in);
+    Scanner pedesalario = new Scanner(System.in);
     ArrayList<Funcionario> listaf = new ArrayList();
 
     @Override
@@ -49,7 +50,7 @@ public class Funcionario extends Pessoa implements InterfaceFuncionario {
         System.out.println("Informe o número de telefone: ");
         funcionario.setnumTelefone(pedetelefone.nextLine());
         System.out.println("Informe o salário: ");
-        salario = entrada.nextFloat();
+        funcionario.setSalario(pedesalario.nextFloat());
         listaf.add(funcionario);
 
     }
@@ -107,7 +108,14 @@ public class Funcionario extends Pessoa implements InterfaceFuncionario {
                 for (int i = 0; i < listaf.size(); i++) {
             voltas++;
             if (listaf.get(i).getCpf().contains(cpfc)) {
-                //Método do Status aqui!
+                System.out.println("--- DADOS DO USUÁRIO ---");
+                System.out.println("Nome: " + listaf.get(i).getNome());
+                System.out.println("Endereço: " + listaf.get(i).getEndereco());
+                System.out.println("E-mail: " + listaf.get(i).getEmail());
+                System.out.println("CPF: " + listaf.get(i).getCpf());
+                System.out.println("RG: " + listaf.get(i).getRg());
+                System.out.println("Telefone: " + listaf.get(i).getnumTelefone());
+                System.out.println("Salário: " + listaf.get(i).getSalario());
                 resultado++;
             } else if (voltas == listaf.size() && resultado == 0) {
                 System.out.println("O CPF informado não existe");

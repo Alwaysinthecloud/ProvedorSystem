@@ -8,6 +8,7 @@ public class MenuInicial {
     ArrayList<Funcionario> listaf = new ArrayList();
     Funcionario master = new Funcionario();
     private int op;
+    int i;
 
     public void primeiroMenu() {
         Scanner entrada = new Scanner(System.in);
@@ -25,11 +26,14 @@ public class MenuInicial {
                         System.out.println("1- Cadastrar Funcionário ");
                         System.out.println("2- Remover Funcionário ");
                         System.out.println("3- Aumentar Salário ");
-                        System.out.println("4- Diminuir Salário ");
+                        System.out.println("4- Buscar Funcionário ");
                         System.out.println("5- Sair");
                         System.out.println("-------------------------");
                         System.out.print("Digite a opção desejada: ");
                         op = entrada.nextInt();
+                        for(i=0;i>100;i++){
+                            System.out.println("");
+                        }
                         switch (op) {
                             case 1:
                                 master.adicionarFuncionario();
@@ -42,7 +46,7 @@ public class MenuInicial {
                                 master.aumentarSalario();
                                 break;
                             case 4:
-                                master.diminuirSalario();
+                                master.buscar();
                                 break;
 
                         }
