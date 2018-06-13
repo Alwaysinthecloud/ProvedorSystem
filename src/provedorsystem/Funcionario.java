@@ -13,15 +13,8 @@ public class Funcionario extends Pessoa implements InterfaceFuncionario {
 
     public Funcionario() {
     }
-//    Scanner pedecpf = new Scanner(System.in);
+
     Scanner entrada = new Scanner(System.in);
-//    Scanner pedenome = new Scanner(System.in);
-//    Scanner endereco = new Scanner(System.in);
-//    Scanner email = new Scanner(System.in);
-//    Scanner cpfcan = new Scanner(System.in);
-//    Scanner pederg = new Scanner(System.in);
-//    Scanner pedetelefone = new Scanner(System.in);
-//    Scanner pedesalario = new Scanner(System.in);
     ArrayList<Funcionario> listaf = new ArrayList();
 
     @Override
@@ -36,7 +29,9 @@ public class Funcionario extends Pessoa implements InterfaceFuncionario {
     @Override
     public void adicionarFuncionario() {
         Funcionario funcionario = new Funcionario();
-
+        for (int i = 0; i < 50; ++i) {
+            System.out.println();
+        }
         System.out.println("Informe o nome: ");
         funcionario.setNome(entrada.nextLine());
         System.out.println("Informe o endereço: ");
@@ -58,6 +53,9 @@ public class Funcionario extends Pessoa implements InterfaceFuncionario {
 
     @Override
     public void removerFuncionario() {
+        for (int i = 0; i < 50; ++i) {
+            System.out.println();
+        }
         System.out.println("Informe o CPF do funcionário: ");
         cpfc = entrada.nextLine();
         int resultado = 0;
@@ -78,6 +76,9 @@ public class Funcionario extends Pessoa implements InterfaceFuncionario {
 
     @Override
     public void aumentarSalario() {
+        for (int i = 0; i < 50; ++i) {
+            System.out.println();
+        }
         System.out.println("CPF de quem irá receber aumento: ");
         cpfc = entrada.nextLine();
         System.out.println("Informe em R$ o valor do aumento: ");
@@ -100,14 +101,16 @@ public class Funcionario extends Pessoa implements InterfaceFuncionario {
 
     }
 
-
     @Override
     public void buscar() {
         int voltas = 0;
-        int resultado =0;
+        int resultado = 0;
+        for (int i = 0; i < 50; ++i) {
+            System.out.println();
+        }
         System.out.println("Informe o CPF para busca: ");
         cpfc = entrada.nextLine();
-                for (int i = 0; i < listaf.size(); i++) {
+        for (int i = 0; i < listaf.size(); i++) {
             voltas++;
             if (listaf.get(i).getCpf().contains(cpfc)) {
                 System.out.println("--- DADOS DO USUÁRIO ---");
@@ -124,8 +127,6 @@ public class Funcionario extends Pessoa implements InterfaceFuncionario {
             }
 
         }
-        
-        
 
     }
 

@@ -31,7 +31,7 @@ public class MenuInicial {
                         System.out.println("-------------------------");
                         System.out.print("Digite a opção desejada: ");
                         op = entrada.nextInt();
-                        for(i=0;i>100;i++){
+                        for (i = 0; i > 100; i++) {
                             System.out.println("");
                         }
                         switch (op) {
