@@ -57,7 +57,7 @@ public class MenuInicial {
                     do {
                         System.out.println("-------------------------");
                         System.out.println("1- Cadastrar Cliente ");
-                        System.out.println("2- Remover Funcionário ");
+                        System.out.println("2- Remover Cliente ");
                         System.out.println("3- Buscar Cliente ");
                         System.out.println("4- Sair");
                         System.out.println("-------------------------");
