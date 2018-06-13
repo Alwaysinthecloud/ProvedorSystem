@@ -7,6 +7,7 @@ public class MenuInicial {
 
     ArrayList<Funcionario> listaf = new ArrayList();
     Funcionario master = new Funcionario();
+    Cliente mister = new Cliente();
     private int op;
     int i;
 
@@ -50,10 +51,38 @@ public class MenuInicial {
                                 break;
 
                         }
-                    } while (op != 5);
-            }
 
+                    } while (op != 5);
+                case 2:
+                    do {
+                        System.out.println("-------------------------");
+                        System.out.println("1- Cadastrar Cliente ");
+                        System.out.println("2- Remover Funcionário ");
+                        System.out.println("3- Buscar Cliente ");
+                        System.out.println("4- Sair");
+                        System.out.println("-------------------------");
+                        System.out.print("Digite a opção desejada: ");
+                        op = entrada.nextInt();
+                        for (i = 0; i > 100; i++) {
+                            System.out.println("");
+                        }
+                        switch (op) {
+                            case 1:
+                                mister.cadastrarCliente();
+                                break;
+                            case 2:
+                                mister.removerCliente();
+                                break;
+                            case 3:
+                                mister.Buscar();
+                                break;
+
+                        }
+                    } while (op != 4);
+
+            }
         } while (op != 3);
+
     }
 
 }
