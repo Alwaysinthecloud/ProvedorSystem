@@ -89,7 +89,7 @@ public class Funcionario extends Pessoa implements InterfaceFuncionario {
 
         for (int i = 0; i < listaf.size(); i++) {
             voltas++;
-            if (listaf.get(i).getCpf().contains(cpfc)) {
+            if (listaf.get(i).getCpf().equals(cpfc)) {
                 listaf.get(i).setSalario(listaf.get(i).getSalario() + aumento);
                 System.out.println("Novo salário: " + listaf.get(i).getSalario());
                 resultado++;
@@ -112,7 +112,7 @@ public class Funcionario extends Pessoa implements InterfaceFuncionario {
         cpfc = entrada.nextLine();
         for (int i = 0; i < listaf.size(); i++) {
             voltas++;
-            if (listaf.get(i).getCpf().contains(cpfc)) {
+            if (listaf.get(i).getCpf().equals(cpfc)) {
                 System.out.println("--- DADOS DO USUÁRIO ---");
                 System.out.println("Nome: " + listaf.get(i).getNome());
                 System.out.println("Endereço: " + listaf.get(i).getEndereco());

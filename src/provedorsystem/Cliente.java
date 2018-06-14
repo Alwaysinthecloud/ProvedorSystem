@@ -83,7 +83,7 @@ public class Cliente extends Pessoa implements InterfaceCliente {
 
         for (int i = 0; i < Cliente1.size(); i++) {
             voltas++;
-            if (Cliente1.get(i).getCpf().contains(Cpf2)) {
+            if (Cliente1.get(i).getCpf().equals(Cpf2)) {
                 System.out.println("--- DADOS DO USUÁRIO ---");
                 System.out.println("Nome: " + Cliente1.get(i).getNome());
                 System.out.println("E-mail: " + Cliente1.get(i).getEmail());
